@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion compile_sdk
+    buildToolsVersion build_tools
+
+    defaultConfig {
+        applicationId "com.aware.plugin.upmc.dash"
+        minSdkVersion 24
+        targetSdkVersion target_sdk
+        versionCode 12
+        versionName "2.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation "com.google.android.gms:play-services-wearable:$google_libs"
+    implementation 'com.google.android.support:wearable:2.2.0'
+    compileOnly 'com.google.android.wearable:wearable:2.2.0'
+}
