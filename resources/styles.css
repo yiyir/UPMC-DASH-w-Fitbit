@@ -1,0 +1,101 @@
+.background {
+  viewport-fill: black;
+}
+
+#time-label {
+  font-size: 95;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 50%;
+  fill: white;
+}
+
+#connection-status {
+  font-size: 28;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 90%;
+  fill: white;
+}
+
+#total {
+  font-size: 24;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 82%;
+  fill: white;
+}
+
+#retention {
+  font-size: 24;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 90%;
+  fill: white;
+}
+#step-count {
+  font-size: 40;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: end;
+  x: 45%;
+  y: 72%;
+  fill: yellow;
+}
+#step-label {
+  font-size: 32;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: start;
+  x: 50%;
+  y: 72%;
+  fill: white;
+}
+#battery-percentage {
+  font-size: 32;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: middle;
+  x: 86%;
+  y: 12%;
+  fill: white;
+}
+
+textarea {
+  font-size: 40;
+  font-family: System-Bold;
+  font-weight: regular;
+  y: 10;
+  text-length: 1024;
+}
+
+text {
+  font-size: 50;
+  font-family: System-Bold;
+  font-weight: regular;
+}
+
+
+.tile-list-item {
+  height: 88;
+}
+
+.tile-list-item text {
+  fill: fb-yellow;
+}
+
+.tile-divider-bottom {
+  x: 0;
+  y: 100%-1;
+  width: 100%;
+  height: 1;
+  fill: grey;
+}

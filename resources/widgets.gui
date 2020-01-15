@@ -1,0 +1,18 @@
+<svg>
+  <defs>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="import" href="/mnt/sysassets/widgets_common.gui" />
+    
+    <!-- Additional imports -->
+    <link rel="import" href="/mnt/sysassets/widgets/combo_button_widget.gui" />
+    <link rel="import" href="/mnt/sysassets/widgets/tile_list_widget.gui" />
+    <link rel="import" href="/mnt/sysassets/widgets/checkbox_tile_widget.gui" />
+    <link rel="import" href="/mnt/sysassets/widgets/square_button_widget.gui" />
+    
+    <!-- Custom tile list item with checkbox -->
+<!--     <symbol id='log-checkbox-tile' href='#tile-list-item'>
+    <use id="log-checkbox" href='#checkbox-tile'/>
+    </symbol> -->
+    
+  </defs>
+</svg>

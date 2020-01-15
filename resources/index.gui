@@ -1,0 +1,113 @@
+<!-- <svg class="background"> -->
+<svg>
+  <image id="background" href="black.jpeg" />
+<!--   symbol for the main layout on the watch -->
+  <defs>
+    <symbol id="main-screen">
+      <text id="time-label" />
+<!--       <text id="connection-status"/> -->
+      <!-- <text id = "total">total: 0</text> -->
+      <!-- <text id = "retention">retention: 0</text> -->
+      <text id="step-count">--</text>
+      <text id="step-label">steps</text>
+      <text id="battery-percentage" />
+      <image id="battery-icon" x="64%" y="0" height ="16%" width="12%"/>
+<!--       <image id = "battery-icon" x="50%" y="50%"  href="full_battery_small.png" load="sync" /> -->
+    </symbol>
+  </defs>
+<!--   symbol for the appraisal layout -->
+  <defs>
+    <symbol id="notification">
+      <rect id="notif-rect" x="0" y="0" width="100%" height="100%" fill="inherit" />
+      <textarea id="notif-textarea" text-anchor= "middle" display-align="center" fill="white"/>
+    </symbol>
+  </defs>
+<!--   symbol for the intervention layout -->
+  <defs>
+    <symbol id="response-buttons">
+      <textarea id="comboText" text-anchor= "middle" display-align="center" fill="white" text-buffer = "Ready for a short walk?"/>
+      <use id="button-snooze" href="#combo-button-upper-right" fill="fb-yellow">
+        <set href="combo-button-icon" attributeName="href" to="snooze.png"/>
+        <set href="combo-button-icon-press" attributeName="href" to="timer.png"/>
+        <set href="combo-button-stroke" attributeName="display" to="inline"/>
+      </use>
+      <use id="button-ok" href="#combo-button-lower-left" fill="fb-green">
+        <set href="combo-button-icon" attributeName="href" to="steps.png"/>
+        <set href="combo-button-icon-press" attributeName="href" to="steps_pressed.png"/>
+        <set href="combo-button-stroke" attributeName="display" to="inline"/>
+      </use>
+      <use id="button-no" href="#combo-button-lower-right" fill="fb-red">
+        <set href="combo-button-icon" attributeName="href" to="no.png"/>
+        <set href="combo-button-icon-press" attributeName="href" to="no_pressed.png"/>
+        <set href="combo-button-stroke" attributeName="display" to="inline"/>
+      </use>
+    </symbol>
+  </defs>
+<!--   symbol for the checkbox header -->
+  <defs>
+    <symbol id="header-with-divider" href="#tile-list-header">
+      <rect id="tile-divider-bottom" class="tile-divider-bottom" />
+    </symbol>
+  </defs>
+<!--   symbol for the checkbox footer -->
+  <defs>
+    <symbol id="footer-with-button" href="#tile-list-footer">
+      <use id = "submit-button" href = "#square-button" fill = "fb-yellow" x ="2%" y= "2%" width = "96%" height = "96%">
+           <set href="#text" attributeName = "text-buffer" to="Submit"/>
+           <set href="#text" attributeName = "font-family" to="System-Bold"/>
+           <set href="#text" attributeName = "font-size" to="50"/>
+      </use>
+    </symbol>
+  </defs>
+<!--   symbol for the checkbox layout -->
+<!--   <defs> -->
+<!--     <symbol id = "checkbox-layout"> -->
+      <use id="reason-list" href="#tile-list">
+      <!-- specify how many pixels of the content are taken by separators -->
+      <var id="separator-height-bottom" value="2"/>
+      <!-- disable tile list reordering -->
+      <var id="reorder-enabled" value="0"/>
+      <!-- specify the header -->
+      <use id= "header" href="#header-with-divider" class="tile-list-item">
+        <text>UPMC DASH</text>
+      </use>
+      <use href="#tile-list-item" class="tile">
+        <use id="reason1" href="#checkbox-tile" class = "checkbox-item">
+          <set href="header/text" attributeName="text-buffer" to="Busy" />
+          <set href="header/text" attributeName="font-size" to="50" />
+        </use>
+      </use>                      
+      <use href="#tile-list-item" class="tile">
+        <use id="reason2" href="#checkbox-tile" class = "checkbox-item">
+          <set href="header/text" attributeName="text-buffer" to="Pain" />
+          <set href="header/text" attributeName="font-size" to="50" />
+        </use>
+      </use>               
+      <use href="#tile-list-item" class="tile">
+        <use id="reason3" href="#checkbox-tile" class = "checkbox-item">
+          <set href="header/text" attributeName="text-buffer" to="Nausea" />
+          <set href="header/text" attributeName="font-size" to="50" />
+        </use>
+      </use>       
+      <use href="#tile-list-item" class="tile">
+        <use id="reason4" href="#checkbox-tile" class = "checkbox-item">
+          <set href="header/text" attributeName="text-buffer" to="Tired" />
+          <set href="header/text" attributeName="font-size" to="50" />
+        </use>
+      </use>
+      <use href="#tile-list-item" class="tile">
+        <use id="reason5" href="#checkbox-tile" class = "checkbox-item">
+          <set href="header/text" attributeName="text-buffer" to="Other" />
+          <set href="header/text" attributeName="font-size" to="50" />
+        </use>
+      </use>
+      <use id = "footer" href="#footer-with-button" class="tile-list-item">
+      </use>        
+      </use>
+<!--     </symbol> -->
+<!--   </defs> -->
+  <use id = "main-layout" href = "#main-screen" />
+  <use id = "response-layout" href = "#response-buttons" pointer-events="visible"/>
+  <use id = "feedback-layout" href = "#notification" pointer-events="visible"/>
+<!--   <use id = "reason-list" href = "#checkbox-layout" pointer-events="visible"/> -->
+</svg>
